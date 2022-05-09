@@ -6,7 +6,7 @@ const ExerciseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    desciption: {
+    description: {
       type: String,
       required: true,
     },
@@ -16,7 +16,7 @@ const ExerciseSchema = new mongoose.Schema(
     },
     date: {
       type: Date,
-      required: true,
+      default: Date.now(),
     },
   },
   {
@@ -24,4 +24,4 @@ const ExerciseSchema = new mongoose.Schema(
   }
 )
 
-module.exports = mongoose.model('Excercise', ExerciseSchema)
+module.exports = mongoose.model('Exercise', ExerciseSchema)
