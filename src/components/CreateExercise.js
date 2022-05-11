@@ -58,7 +58,7 @@ export default class CreateExercise extends Component {
       .then((res) =>
         this.setState({
           users: res.data,
-          username: res.data[0],
+          username: res.data[0].username,
         })
       )
       .catch((error) => console.log(error))
